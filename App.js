@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native'
 
-export default function App() {
+//view ---- container that will wrap multiple components together
+//Text ---- to showcase any text
+//textinput ----- input component
+//button ---- to showcase any button
+
+export default function () {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ padding: 60 }}>
+      {/*to render input along with button */}
+      <View style={styles.innerContainer}>
+        <TextInput style={styles.input} placeholder="Add Your Yote Here" />
+        <Button color={'#000'} title="Add Note" />
+      </View>
+      {/*to render input along with button */}
+      {/*to render all the nodes that we all created */}
+      <View></View>
+      {/*to render all the nodes that we all created */}
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  innerContainer: {
+    flexDirection: 'row',
   },
-});
+  input: {
+    borderWidth: 1,
+    borderColor: '#ddd',
+    flex: 1,
+  },
+})
